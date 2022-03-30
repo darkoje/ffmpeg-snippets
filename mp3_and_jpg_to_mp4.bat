@@ -1,0 +1,1 @@
+for %%f in ("*.mp3") do ffmpeg -r 1 -loop 1 -i image.jpg -i "%%f" -c:a copy -c:v libx264 -pix_fmt yuv420p -crf 0 -vf scale=1920:-2 -flags global_header -shortest "%%~nf.mp4"

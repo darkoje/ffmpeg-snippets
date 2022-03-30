@@ -1,0 +1,1 @@
+ffmpeg -i input.avi -c:a aac -b:a 128k -c:v libx264 -pix_fmt yuv420p -crf 0 -vf scale=1920:-2 -flags global_header -shortest output.mp4
